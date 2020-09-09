@@ -6,14 +6,14 @@ abstract class AbstractWeapon(val maxValueOfWeapon: Int, val fireType: FireType)
 
     fun checkOfRecharge(): Boolean {
 
-        return listAmmo.isEmpty()
+        return listAmmo.size < fireType.weaponValue
     }
 
     abstract fun createOfAmmo(): Ammo
 
     fun recharge() {
 
-        for(i in 0 until maxValueOfWeapon) {
+        for(i in listAmmo.size until maxValueOfWeapon) {
 
             listAmmo.add(createOfAmmo())
         }

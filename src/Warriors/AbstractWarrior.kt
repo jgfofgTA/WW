@@ -5,12 +5,12 @@ import kotlin.random.Random
 
 abstract class AbstractWarrior(
         maxHealth: Int,
-        override var isKilled: Boolean,
         override val chanceToAvoidBeingHit: Int,
         val accuracy: Int,
         val abstractWeapon: AbstractWeapon
 ) : Warrior {
 
+    override var isKilled: Boolean = false
     var health: Int = maxHealth
     var sumDamage: Int = 0
 

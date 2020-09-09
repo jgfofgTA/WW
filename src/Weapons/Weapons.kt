@@ -2,9 +2,7 @@ package Weapons
 
 object Weapons {
 
-    val singleType: FireType.SingleType = FireType.SingleType()
-
-    object PISTOL: AbstractWeapon(maxValueOfWeapon = 7, fireType = singleType) {
+    object PISTOL: AbstractWeapon(maxValueOfWeapon = 7, fireType = FireType.SingleType()) {
 
         override fun createOfAmmo(): Ammo {
 
@@ -28,7 +26,7 @@ object Weapons {
         }
     }
 
-    object ANNIHILATORGUN: AbstractWeapon(maxValueOfWeapon = 1, fireType = singleType) {
+    object ANNIHILATORGUN: AbstractWeapon(maxValueOfWeapon = 1, fireType = FireType.SingleType()) {
 
         override fun createOfAmmo(): Ammo {
 
